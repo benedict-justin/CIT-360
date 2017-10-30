@@ -1,6 +1,7 @@
 {
     "elements": {},
     "attributes": {
+        "ontouchstart": {},
         "frameborder": {
             "context": "video"
         }
