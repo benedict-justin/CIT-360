@@ -30,7 +30,7 @@ public class GradesTest {
         System.out.println("\tTest Case #1");
         
         //Input Values
-        int grade = 91;
+        int grade = 89;
         
         //Create instatnce of Grades class
         Grades instance = new Grades();
