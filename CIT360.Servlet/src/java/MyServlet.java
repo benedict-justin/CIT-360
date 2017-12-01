@@ -35,7 +35,29 @@ public class MyServlet extends HttpServlet {
 
             out.println("Hello World");
             
-         
+        
+            
+         String s = request.getParameter("monty");
+        try (PrintWriter out = response.getWriter()) {
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet Monty</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Monty Question</h1>");    
+        if (s == null || (s = htmlFilter(s.trim())).length() == 0) {
+                out.println("<p>You must enter a valid number</p>");
+
+                out.println("<h2>Choose a Frequency and Amplitude</h2>");
+                out.println("<form method=\"post\" action=\"/CIT360/monty\">");
+                out.println("    <fieldset>");
+                out.println("        <legend>Select Numbers</legend>");
+                out.println("        Number: <input type=\"number\" name=\"monty\" /><br /><br />");
+                out.println("        <input type=\"submit\" value=\"monty\" />");
+                out.println("    </fieldset>");
+                out.println("</form>");
+            }    
             
         }
     }
